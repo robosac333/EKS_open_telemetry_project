@@ -32,6 +32,8 @@ module "ec2" {
   subnet_id = module.networking.public_subnet_id
   vpc_id    = module.networking.ecommerce_vpc_id
   vpc_name  = var.vpc_name
+  aws_access_key_id     = var.aws_access_key_id
+  aws_secret_access_key = var.aws_secret_access_key
 }
 
 # This module configures monitoring and auto-scaling alarms for the application
